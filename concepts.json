@@ -1,0 +1,165 @@
+{
+ "module": 3,
+ "concepts": [
+  {
+   "id": "gate",
+   "name": "the gate on a release",
+   "slide": "Definition — the gate",
+   "formula": "promote(candidate) ⇔ m(candidate) > m(approved) + δ, with δ = 0 here (a tie is refused) and δ = 0.01 in Module 5",
+   "citation": "Zaharia, Chen, Davidson, Ghodsi, Hong, Konwinski, Murching, Nykodym, Ogilvie, Parkhe, Xie & Zumar (2018)",
+   "lab": 1,
+   "function": "promote_if_better",
+   "check": "verify/check_01.py"
+  },
+  {
+   "id": "release_by_indirection",
+   "name": "release by indirection, and rollback as the same move reversed",
+   "slide": "Definition — release by indirection",
+   "formula": "serve(name) = artefact[approved]; promote: approved ← candidate, history ← history + [candidate]; rollback: history ← history[:−1], approved ← history[−1]",
+   "citation": "Zaharia, Chen, Davidson, Ghodsi, Hong, Konwinski, Murching, Nykodym, Ogilvie, Parkhe, Xie & Zumar (2018)",
+   "lab": 1,
+   "function": "rollback",
+   "check": "verify/check_01.py"
+  },
+  {
+   "id": "model_signature",
+   "name": "the model signature recorded with the artefact",
+   "slide": "Definition — model signature",
+   "formula": "S = (name_i, type_i)_{i=1..k}, recorded with the model; accept(x) ⇔ ∀i: name_i ∈ columns(x) ∧ type(x[name_i]) = type_i; input = (x[name_1], …, x[name_k])",
+   "citation": "Zaharia, Chen, Davidson, Ghodsi, Hong, Konwinski, Murching, Nykodym, Ogilvie, Parkhe, Xie & Zumar (2018)",
+   "lab": 1,
+   "function": "log_training_run",
+   "check": "verify/check_01.py"
+  },
+  {
+   "id": "release_by_alias",
+   "name": "release by alias",
+   "slide": "Definition — release by alias",
+   "formula": "alias: name@alias → version; promote: alias[champion] ← version; rollback: alias[champion] ← previous version; serve(models:/name@champion)",
+   "citation": "Zaharia, Chen, Davidson, Ghodsi, Hong, Konwinski, Murching, Nykodym, Ogilvie, Parkhe, Xie & Zumar (2018)",
+   "lab": 1,
+   "function": "promote_by_alias",
+   "check": "verify/check_01.py"
+  },
+  {
+   "id": "promotion_verdict",
+   "name": "the promotion verdict, and the argument for it",
+   "slide": "Definition — the promotion verdict",
+   "formula": "verdict(evidence) = (call, reason), call ∈ {promote, hold, roll back}; roll back ⇔ m(approved, now) < m(approved, at promotion) − δ_r; promote ⇔ ¬roll back ∧ K(candidate) < K(approved) ∧ K(candidate) < K(trivial) ∧ p95(candidate) ≤ budget; otherwise hold",
+   "citation": "Provost & Fawcett (2013)",
+   "lab": 1,
+   "function": "promotion_verdict",
+   "check": "verify/check_01.py"
+  },
+  {
+   "id": "data_contract",
+   "name": "the data contract at the door",
+   "slide": "Definition — the data contract at the door",
+   "formula": "accept(x) ⇔ ∀f: (required_f ⇒ f ∈ x) ∧ (f ∈ x ∧ x[f] = null ⇒ nullable_f) ∧ (f ∈ x ∧ x[f] ≠ null ⇒ type(x[f]) = type_f ∧ min_f ≤ x[f] ≤ max_f); otherwise the refusal names every f that failed",
+   "citation": "Breck, Polyzotis, Roy, Whang & Zinkevich (2019)",
+   "lab": 2,
+   "function": "validate",
+   "check": "verify/check_02.py"
+  },
+  {
+   "id": "refusal_and_provenance",
+   "name": "refusal at the door, and provenance in the answer",
+   "slide": "Definition — refusal at the door, and provenance in the answer",
+   "formula": "complaints ≠ ∅ ⇒ (status 422, every complaint naming its field, model calls = 0); complaints = ∅ ⇒ (status 200, probability p, decision = aboard iff p ≥ t, model_version, threshold t)",
+   "citation": "Fielding, Nottingham & Reschke (2022)",
+   "lab": 2,
+   "function": "respond",
+   "check": "verify/check_02.py"
+  },
+  {
+   "id": "cost_sensitive_threshold",
+   "name": "the cost-sensitive decision threshold",
+   "slide": "Definition — the cost-sensitive threshold",
+   "formula": "t* = C_fp / (C_fp + C_fn); decide aboard ⇔ p ≥ t*",
+   "citation": "Elkan (2001)",
+   "lab": 3,
+   "function": "threshold_from_costs",
+   "check": "verify/check_03.py"
+  },
+  {
+   "id": "realised_cost",
+   "name": "the realised cost of a threshold",
+   "slide": "Definition — realised cost of a threshold",
+   "formula": "K(t) = C_fp · #{i : p_i ≥ t and y_i = 0} + C_fn · #{i : p_i < t and y_i = 1}",
+   "citation": "Elkan (2001)",
+   "lab": 3,
+   "function": "realised_cost",
+   "check": "verify/check_03.py"
+  },
+  {
+   "id": "reliability_bands",
+   "name": "reliability in bands, and the largest gap",
+   "slide": "Definition — reliability in bands, and the largest gap",
+   "formula": "B_j = {i : e_j ≤ p_i < e_(j+1)}, the last band closed at the top; predicted_j = mean_{i ∈ B_j} p_i, actual_j = mean_{i ∈ B_j} y_i, kept when |B_j| ≥ r; largest gap = max_j |predicted_j − actual_j|",
+   "citation": "DeGroot & Fienberg (1983)",
+   "lab": 3,
+   "function": "reliability",
+   "check": "verify/check_03.py"
+  },
+  {
+   "id": "cost_at_mean_versus_mean_cost",
+   "name": "cost at the mean demand against mean cost over the demand",
+   "slide": "Definition — cost at the mean versus mean cost",
+   "formula": "g(E[D]) = C_fn · max(0, E[D] − c) and E[g(D)] = C_fn · Σ_{d>c} (d − c) · P(D = d), with D ~ Poisson(λ)",
+   "citation": "Jensen (1906)",
+   "lab": 3,
+   "function": "cost_at_mean_versus_mean_cost",
+   "check": "verify/check_03.py"
+  },
+  {
+   "id": "caused_skew",
+   "name": "training-serving skew, caused on purpose and measured",
+   "slide": "Definition — causing the skew, and measuring it",
+   "formula": "changed(π) = |{i : 1[p_i ≥ t] ≠ 1[p_i^π ≥ t]}| / n, where p_i^π is the same request with two declared fields exchanged and the row assembled in the order the keys arrived; failures(π) = 0; and re-assembling in the stored order gives changed = 0",
+   "citation": "Breck, Polyzotis, Roy, Whang & Zinkevich (2019)",
+   "lab": 4,
+   "function": "cause_and_cure_skew",
+   "check": "verify/check_04.py"
+  },
+  {
+   "id": "training_serving_skew",
+   "name": "training-serving skew, and the cure by stored order",
+   "slide": "Definition — training–serving skew",
+   "formula": "skew ⇔ prepare_serve(x) ≠ prepare_train(x); cure: input_j = ((x[f_j] if present else median_{f_j}) − mean_{f_j}) / std_{f_j} for f_j in the stored order, j = 1..k",
+   "citation": "Breck, Polyzotis, Roy, Whang & Zinkevich (2019)",
+   "lab": 4,
+   "function": "prepare",
+   "check": "verify/check_04.py"
+  },
+  {
+   "id": "percentile_latency",
+   "name": "percentile latency by nearest rank",
+   "slide": "Definition — percentile latency, nearest rank",
+   "formula": "Q(p) = x_(⌈p · n / 100⌉), where x_(1) ≤ … ≤ x_(n) are the sorted durations",
+   "citation": "Hyndman & Fan (1996)",
+   "lab": 4,
+   "function": "percentile_latency",
+   "check": "verify/check_04.py"
+  },
+  {
+   "id": "one_preparation_two_paths",
+   "name": "one preparation, two paths",
+   "slide": "Definition — one preparation, two paths",
+   "formula": "batch(frame)_i = model(prepare(row_i)) for every row i, |difference| < 10⁻⁹",
+   "citation": "Breck, Polyzotis, Roy, Whang & Zinkevich (2019)",
+   "lab": 4,
+   "function": "batch_predict",
+   "check": "verify/check_04.py"
+  },
+  {
+   "id": "signature_enforced",
+   "name": "the model signature, enforced at prediction",
+   "slide": "Definition — model signature",
+   "formula": "S = (name_i, type_i)_{i=1..k}, recorded with the model; accept(x) ⇔ ∀i: name_i ∈ columns(x) ∧ type(x[name_i]) = type_i; input = (x[name_1], …, x[name_k])",
+   "citation": "Zaharia, Chen, Davidson, Ghodsi, Hong, Konwinski, Murching, Nykodym, Ogilvie, Parkhe, Xie & Zumar (2018)",
+   "lab": 4,
+   "function": "ask_registered",
+   "check": "verify/check_04.py"
+  }
+ ]
+}

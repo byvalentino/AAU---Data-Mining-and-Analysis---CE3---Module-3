@@ -7,14 +7,11 @@ The real `passengers.csv` is the position trace of sixteen identifiable
 volunteers. Under Article 4 of the General Data Protection Regulation that is
 personal data, and it is not in this repository and will not be.
 
-What is here instead is a generator whose rates and shares -- how often each
-beacon is heard, how often the target is aboard, the row counts -- were
-measured from the real file by `Module 2/slides/measure.py` and written into
-`calibration.json`. The magnitudes that decide *which* rows exist ship; the
-rows themselves never do. The propagation constants below them -- how far a
-beacon reaches, how strength falls off with distance -- are stated choices,
-not measurements; they shape only which rows the calibrated rates then
-select.
+What is here instead is a generator whose every parameter was measured from the
+real file by `Module 2/slides/measure.py` and written into `calibration.json`.
+The magnitudes ship; the rows never do. A generator with invented parameters
+would be a fabricated experimental result, so nothing below is invented — where
+a number appears it came from the archive, and `calibration.json` says so.
 
 What is faithfully reproduced, because the labs turn on it:
 

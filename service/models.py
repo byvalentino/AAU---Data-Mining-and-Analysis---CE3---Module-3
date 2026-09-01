@@ -332,6 +332,7 @@ def log_to_registry(record: dict) -> dict:
             mlflow.log_metrics(metrics)
             info = mlflow.sklearn.log_model(
                 pipeline, artifact_path="model",
+                serialization_format=mlflow.sklearn.SERIALIZATION_FORMAT_CLOUDPICKLE,
                 signature=infer_signature(example, pipeline.predict_proba(example)),
                 input_example=example.head(2),
                 registered_model_name=REGISTERED_MODEL,

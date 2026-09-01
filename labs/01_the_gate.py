@@ -217,8 +217,11 @@ def log_training_run(name: str, model, X, y_pred, params: dict, metrics: dict) -
         (Zaharia et al., 2018). Choices: the signature is inferred from `X` and
         `y_pred` at logging time; probabilities, not labels
         (pyfunc_predict_fn="predict_proba"); the environment is recorded as the
-        versions actually running (environment_pins()). Slide: "Definition — model
-        signature".
+        versions actually running (environment_pins()); the artefact is written
+        with cloudpickle (serialization_format=SERIALIZATION_FORMAT_CLOUDPICKLE),
+        because the pipeline carries a class this course wrote and MLflow 3's
+        default format refuses to serialise a type it does not know. Slide:
+        "Definition — model signature".
     Needs: mlflow.start_run, mlflow.log_params, mlflow.log_metrics, mlflow.scikit-learn,
         mlflow.models.infer_signature
     """

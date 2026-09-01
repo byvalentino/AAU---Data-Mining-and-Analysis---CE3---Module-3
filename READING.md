@@ -112,6 +112,18 @@ Deployment and Prediction Service". O'Reilly.** Through the library.
 for what you built in fifty lines in Lab 1. Read it to recognise the same ideas
 under different names.
 
+**MLflow documentation — the scikit-learn flavour, and what it writes.**
+<https://mlflow.org/docs/latest/api_reference/python_api/mlflow.sklearn.html> —
+read `log_model`, and in particular `serialization_format`. This module pins
+**MLflow 3.15.1**, and both of its logging sites name `cloudpickle` rather than
+taking the default. MLflow 3 made `skops` the default, and `skops` refuses to
+write a class it does not recognise — here `StoredTransform` in
+`service/models.py`, which is the step that carries the fitted constants with
+the model. The parameter means the same thing in MLflow 2 and 3, so naming it
+is the fix; pinning the old major version would only postpone it. This is worth
+five minutes because it is the ordinary shape of a platform upgrade: a default
+changed, and the code that relied on the default stopped working.
+
 **Armbrust, M. et al. (2021). *Lakehouse*. CIDR.**
 <https://www.cidrdb.org/cidr2021/papers/cidr2021_paper17.pdf> — free, for the
 platform comparison in block four.

@@ -112,6 +112,7 @@ def log_training_run(name: str, model, X, y_pred, params: dict, metrics: dict) -
         mlflow.log_metrics(metrics)
         info = mlflow.sklearn.log_model(
             model, artifact_path="model",
+            serialization_format=mlflow.sklearn.SERIALIZATION_FORMAT_CLOUDPICKLE,
             signature=infer_signature(X, y_pred),
             input_example=X.head(2),
             registered_model_name=REGISTERED_MODEL,

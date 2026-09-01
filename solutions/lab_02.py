@@ -114,10 +114,12 @@ def validate(request: dict, contract: dict = CONTRACT) -> list:
                 f"{field}: {value} is above the maximum {high} ({rule['units']})")
 
     # A field nobody declared is not automatically wrong, but it is worth saying
-    # so: silently ignoring it is how a caller comes to believe it has an effect.
+    # so: silently accepting it is how a caller comes to believe it has an
+    # effect. Naming it is itself a complaint, so the request is refused rather
+    # than answered with the field quietly dropped.
     for field in request:
         if field not in contract:
-            complaints.append(f"{field}: not in the contract, so it will be ignored")
+            complaints.append(f"{field}: not in the contract, so the request is refused")
     return complaints
 
 

@@ -3,7 +3,7 @@
 Why this lab exists: a model cannot object. Given a speed of nine hundred metres
 per second it returns a probability, so the only thing standing between a
 nonsense request and a confident answer is a rule checked before the model is
-asked. You write that rule, refuse seven impossible requests by name, and make
+asked. You write that rule, refuse eight impossible requests by name, and make
 every answer carry the version that produced it.
 Where it sits: Block 2 — "The data dictionary, with consequences", "Four kinds of
 rule, and the one people forget" and "Refusing well", and the definition slides
@@ -119,13 +119,16 @@ LAB = 2
 # signal strength would refuse most of the traffic; one accepting a null speed
 # would answer a question nobody asked, out of a median.
 
-# The declared range for speed, and where it comes from. Module 1 measured this
-# vehicle's speed over both days of the archive slice this repository ships:
-# -3.361 to 3.555 metres per second (Module 1/slides/measured.json,
-# speed_range_m_per_s; data/README.md). A contract set exactly at a measured
-# extreme refuses the first faster day that ever happens, so the bound is the
-# measurement widened by a margin, and the margin is stated rather than folded
-# in: one metre per second on each side, about a third of the observed spread.
+# The declared range for speed, and where it comes from. This field is the
+# phone's own speed, not the vehicle's -- but a phone aboard moves at the
+# vehicle's speed, so the vehicle's measured range bounds it too. Module 1
+# measured this vehicle's speed over both days of the archive slice this
+# repository ships: -3.361 to 3.555 metres per second (Module 1/slides/
+# measured.json, speed_range_m_per_s; data/README.md). A contract set exactly
+# at a measured extreme refuses the first faster day that ever happens, so the
+# bound is the measurement widened by a margin, and the margin is stated
+# rather than folded in: one metre per second on each side, about a third of
+# the observed spread.
 #
 # An earlier version of this lab declared -5 to 30 metres per second "from the
 # measurement". Thirty metres per second is 108 kilometres per hour, which this

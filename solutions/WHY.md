@@ -9,9 +9,12 @@ one agreed metric.
 Every one of those other properties is an argument somebody will make in a
 meeting. The gate exists so the argument was settled in the open, before there
 was a candidate to be enthusiastic about. Our candidate has five times the
-trees, two hundred and fifty times the size and four times the latency — and is
-nine percentage points worse. A person eyeballing that table refuses it perhaps
-three times in four. A gate refuses it every time.
+trees, two hundred and fifty-eight times the size on disk and seventeen point
+seven times the work per request (`work_multiple` — decision nodes visited,
+counted rather than timed, because two rebuilds of this deck disagreed on
+latency by a factor of two) — and is nine percentage points worse. A person
+eyeballing that table refuses it perhaps three times in four. A gate refuses
+it every time.
 
 Rollback is the release mechanism run backwards, not a separate emergency
 procedure. A rollback path that works differently from the release path is one
@@ -167,7 +170,7 @@ would answer a question nobody asked, out of a median.
 `reliability` is six lines and one uncomfortable result. Two decisions inside it
 were got wrong here once. The last band is **closed** at the top: written as
 `low <= p < high` all the way along, the table silently drops every probability
-of exactly one, and those were 995 of this module's 3,241 test rows and the
+of exactly one, and those were 86 of this module's 3,241 test rows and the
 best-calibrated ones it had. And a band below the floor of fifty rows is dropped
 rather than drawn, because a point on a reliability diagram weighs the same on
 the eye whether it rests on six rows or a thousand, and the eye reads the six as

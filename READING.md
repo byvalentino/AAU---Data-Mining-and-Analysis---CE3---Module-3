@@ -1,10 +1,11 @@
 # Module 3 — Reading, and the exam question
 
 The module is two parts: 3.0, beer and diapers, from a story to a decision
-(`slides/Module3.0_v2.pptx`), and 3.1, deploying a model as a service
+(`slides/Module3.0.pptx`), and 3.1, deploying a model as a service
 (`slides/Module3.1.pptx`, Labs 1 to 3). The student-facing description, with the
-same list in short form, is `Module 3/DESCRIPTION.md`. Sources that serve only
-`slides/Module3.2.pptx` are gathered at the end.
+same list in short form, is `Module 3/DESCRIPTION.md`; it does not describe
+Part 3.2 (`slides/Module3.2.pptx`, Lab 4). Sources that serve only Part 3.2 are
+gathered at the end.
 
 ## Required, before the module — the exam question is set on it
 
@@ -242,7 +243,7 @@ glance only for the date, and for the habit of checking one: a compliance date
 quoted from a slide is the kind of fact that goes stale between one teaching
 year and the next.
 
-## Part 3.2 only — outside the module description of 27 September 2026
+## Part 3.2 only — not covered by the module description of 27 September 2026
 
 **Hyndman, R. J. & Fan, Y. (1996). *Sample Quantiles in Statistical Packages*.
 The American Statistician 50(4), 361–365.**
@@ -252,8 +253,9 @@ other by default. Lab 4 grades definition 1, nearest rank, because for latency
 the honest answer is a duration that happened.
 
 **Armbrust, M. et al. (2021). *Lakehouse*. CIDR.**
-<https://www.cidrdb.org/cidr2021/papers/cidr2021_paper17.pdf> — free, for the
-platform comparison in block four.
+<https://www.cidrdb.org/cidr2021/papers/cidr2021_paper17.pdf> — free. Listed
+among the deck's references. The platform comparison it supports is a paragraph
+of `slides/HANDOUT.md`, not a slide.
 
 ## The exam question for Module 3
 

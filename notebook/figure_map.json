@@ -1,0 +1,574 @@
+{
+ "decks": [
+  "Module3.0.pptx",
+  "Module3.1.pptx",
+  "Module3.2.pptx"
+ ],
+ "note": "Every picture and chart on a shown slide of the three Module 3 decks (3.1 slides 29, 30 and 74 are hidden and skipped), and the drawn diagrams and typed formulas the notebook also reproduces (element \"shapes\"). figures name the notebook's figure cells, equations its sympy formula cells.",
+ "elements": [
+  {
+   "deck": "Module3.0.pptx",
+   "slide": 1,
+   "element": "image21.jpeg",
+   "treatment": "excluded",
+   "reason": "photograph of the AAU Copenhagen atrium, title background; carries no data or concept"
+  },
+  {
+   "deck": "Module3.0.pptx",
+   "slide": 1,
+   "element": "image7.png",
+   "treatment": "excluded",
+   "reason": "the university's logo (white), title slide; carries no data or concept"
+  },
+  {
+   "deck": "Module3.0.pptx",
+   "slide": 5,
+   "element": "image22.png",
+   "figures": [
+    "sales_curve"
+   ]
+  },
+  {
+   "deck": "Module3.0.pptx",
+   "slide": 6,
+   "element": "shapes",
+   "equations": [
+    "conditional_probability"
+   ]
+  },
+  {
+   "deck": "Module3.0.pptx",
+   "slide": 7,
+   "element": "image23.png",
+   "figures": [
+    "daily_counts"
+   ]
+  },
+  {
+   "deck": "Module3.0.pptx",
+   "slide": 8,
+   "element": "image24.png",
+   "figures": [
+    "two_bells"
+   ]
+  },
+  {
+   "deck": "Module3.0.pptx",
+   "slide": 9,
+   "element": "image25.png",
+   "figures": [
+    "hour_vs_day"
+   ]
+  },
+  {
+   "deck": "Module3.0.pptx",
+   "slide": 10,
+   "element": "image26.png",
+   "equations": [
+    "support_confidence_lift"
+   ]
+  },
+  {
+   "deck": "Module3.0.pptx",
+   "slide": 13,
+   "element": "shapes",
+   "figures": [
+    "reweighting"
+   ]
+  },
+  {
+   "deck": "Module3.0.pptx",
+   "slide": 14,
+   "element": "image27.png",
+   "figures": [
+    "floor_plan"
+   ]
+  },
+  {
+   "deck": "Module3.0.pptx",
+   "slide": 15,
+   "element": "image28.png",
+   "equations": [
+    "expected_margin"
+   ]
+  },
+  {
+   "deck": "Module3.0.pptx",
+   "slide": 17,
+   "element": "image29.png",
+   "equations": [
+    "did"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 1,
+   "element": "image21.jpeg",
+   "treatment": "excluded",
+   "reason": "photograph of the AAU Copenhagen atrium, title background; carries no data or concept"
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 1,
+   "element": "image7.png",
+   "treatment": "excluded",
+   "reason": "the university's logo (white), title slide; carries no data or concept"
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 2,
+   "element": "image22.png",
+   "treatment": "excluded",
+   "reason": "poster frame of the trial's camera video (media1.mp4): four camera views and a scaled signal trace; a video is not reproduced"
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 3,
+   "element": "image23.png",
+   "figures": [
+    "route_map"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 4,
+   "element": "image24.png",
+   "treatment": "excluded",
+   "reason": "the medallion (bronze/silver/gold) data-architecture picture, credited to a Medium article; a pipeline-layer diagram, dropped by rule"
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 5,
+   "element": "image25.png",
+   "treatment": "excluded",
+   "reason": "AI-generated infographic ('Data preparation: from raw logs to model silver', Gemini Notebook); its numbers are Module 2's and are not re-derived here"
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 19,
+   "element": "image26.png",
+   "treatment": "excluded",
+   "reason": "vendor logo or screenshot (MLflow model registry); the notebook names the tools in words"
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 19,
+   "element": "image27.jpeg",
+   "treatment": "excluded",
+   "reason": "vendor logo or screenshot (AWS SageMaker model registry); the notebook names the tools in words"
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 19,
+   "element": "image28.png",
+   "treatment": "excluded",
+   "reason": "vendor logo or screenshot (Azure Machine Learning model registry); the notebook names the tools in words"
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 19,
+   "element": "image29.jpeg",
+   "treatment": "excluded",
+   "reason": "vendor logo or screenshot (Google Vertex AI model registry); the notebook names the tools in words"
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 19,
+   "element": "image30.jpg",
+   "treatment": "excluded",
+   "reason": "vendor logo or screenshot (Databricks Unity Catalog model registry); the notebook names the tools in words"
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 19,
+   "element": "image31.png",
+   "treatment": "excluded",
+   "reason": "vendor logo or screenshot (Weights & Biases model registry); the notebook names the tools in words"
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 20,
+   "element": "image32.png",
+   "equations": [
+    "indirection"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 21,
+   "element": "image33.png",
+   "treatment": "excluded",
+   "reason": "vendor screenshot of the MLflow demonstration server; the notebook reads the module's own MLflow store and tabulates its runs instead"
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 21,
+   "element": "image34.png",
+   "treatment": "excluded",
+   "reason": "the MLflow logo"
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 22,
+   "element": "image35.png",
+   "equations": [
+    "signature"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 24,
+   "element": "image36.png",
+   "equations": [
+    "alias"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 27,
+   "element": "image37.png",
+   "figures": [
+    "gate"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 31,
+   "element": "shapes",
+   "equations": [
+    "value_and_cost"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 32,
+   "element": "chart2.xml",
+   "figures": [
+    "pareto_cost_value"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 34,
+   "element": "image40.png",
+   "equations": [
+    "gate"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 34,
+   "element": "shapes",
+   "figures": [
+    "gate_bar"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 35,
+   "element": "image41.png",
+   "equations": [
+    "verdict"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 36,
+   "element": "image42.png",
+   "equations": [
+    "gate_margin"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 39,
+   "element": "shapes",
+   "equations": [
+    "labels_for_margin"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 41,
+   "element": "shapes",
+   "equations": [
+    "regression_gate"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 46,
+   "element": "shapes",
+   "equations": [
+    "contract"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 52,
+   "element": "shapes",
+   "equations": [
+    "refusal"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 60,
+   "element": "image44.png",
+   "equations": [
+    "threshold"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 63,
+   "element": "shapes",
+   "figures": [
+    "priced_decision"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 64,
+   "element": "shapes",
+   "equations": [
+    "realised_cost"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 66,
+   "element": "image45.png",
+   "figures": [
+    "threshold"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 70,
+   "element": "shapes",
+   "equations": [
+    "calibration"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 71,
+   "element": "shapes",
+   "equations": [
+    "reliability"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 73,
+   "element": "image46.png",
+   "figures": [
+    "reliability"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 75,
+   "element": "shapes",
+   "equations": [
+    "jensen_departure"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 76,
+   "element": "image47.png",
+   "figures": [
+    "two_routes"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 77,
+   "element": "image48.png",
+   "figures": [
+    "jensen"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 84,
+   "element": "shapes",
+   "equations": [
+    "calibration_maps"
+   ]
+  },
+  {
+   "deck": "Module3.1.pptx",
+   "slide": 85,
+   "element": "shapes",
+   "equations": [
+    "z_quantiles"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 1,
+   "element": "image21.jpeg",
+   "treatment": "excluded",
+   "reason": "photograph of the AAU Copenhagen atrium, title background; carries no data or concept"
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 1,
+   "element": "image7.png",
+   "treatment": "excluded",
+   "reason": "the university's logo (white), title slide; carries no data or concept"
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 2,
+   "element": "image22.png",
+   "treatment": "excluded",
+   "reason": "AI-generated infographic ('From patterns to decisions', Gemini Notebook), the lecture recap; the notebook recomputes the numbers it quotes where the decks print them"
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 3,
+   "element": "image23.png",
+   "treatment": "excluded",
+   "reason": "poster frame of the trial's camera video (media1.mp4): four camera views and a scaled signal trace; a video is not reproduced"
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 4,
+   "element": "image24.png",
+   "figures": [
+    "route_map"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 5,
+   "element": "image25.png",
+   "treatment": "excluded",
+   "reason": "the medallion (bronze/silver/gold) data-architecture picture, credited to a Medium article; a pipeline-layer diagram, dropped by rule"
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 7,
+   "element": "image26.png",
+   "figures": [
+    "skew"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 8,
+   "element": "image26.png",
+   "figures": [
+    "skew"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 10,
+   "element": "image27.png",
+   "equations": [
+    "skew"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 13,
+   "element": "shapes",
+   "equations": [
+    "caused_skew"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 16,
+   "element": "image28.png",
+   "equations": [
+    "two_paths"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 19,
+   "element": "chart1.xml",
+   "figures": [
+    "speed_two_days"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 20,
+   "element": "chart2.xml",
+   "figures": [
+    "sigmoid"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 21,
+   "element": "chart3.xml",
+   "figures": [
+    "speed_two_days"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 21,
+   "element": "chart4.xml",
+   "figures": [
+    "concept_shift"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 21,
+   "element": "chart5.xml",
+   "figures": [
+    "label_shift"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 21,
+   "element": "shapes",
+   "equations": [
+    "dataset_shift"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 22,
+   "element": "shapes",
+   "equations": [
+    "percentile"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 23,
+   "element": "image29.png",
+   "equations": [
+    "percentile"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 36,
+   "element": "shapes",
+   "equations": [
+    "calibration_maps"
+   ]
+  },
+  {
+   "deck": "Module3.2.pptx",
+   "slide": 37,
+   "element": "shapes",
+   "equations": [
+    "z_quantiles"
+   ]
+  }
+ ]
+}
